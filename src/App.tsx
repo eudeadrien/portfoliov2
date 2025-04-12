@@ -310,22 +310,22 @@ function App() {
               <h3 className="text-xl font-semibold mb-4">{t.center_interet}</h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="/ressources/gaming.png" alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
+                  <img src="./ressources/gaming.png" alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Jeux Vidéo</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="/ressources/f1.png" alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
+                  <img src="./ressources/f1.png" alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
                   <span className="text-sm text-gray-700 font-medium text-center">Formule 1</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="/ressources/manga.png" alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
+                  <img src="./ressources/manga.png" alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Mangas / Animés</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
-                  <img src="/ressources/cybersecurity.png" alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
+                  <img src="./ressources/cybersecurity.png" alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Cybersécurité</span>
                 </div>
               </div>
