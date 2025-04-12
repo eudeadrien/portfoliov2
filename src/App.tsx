@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Server, Shield, Network, Globe2, Download, X } from 'lucide-react';
+import { Github, Linkedin, Mail, Server, Shield, Keyboard, KeyboardOff , Network, Globe2, Download, X } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -16,28 +16,40 @@ function App() {
 
   const softSkills = [
     {
+      title: lang === 'fr' ? 'Autonome' : 'Autonomous',
+      description: lang === 'fr' 
+        ? 'Habitué à travailler de manière indépendante, je suis capable de gérer mes projets en toute autonomie, comme en témoignent mes missions freelance réalisées en parallèle de mes études.'
+        : 'Accustomed to working independently, I am able to manage my projects independently, as evidenced by the freelance assignments I have carried out in parallel with my studies.',
+    },
+    {
       title: lang === 'fr' ? 'Travail d\'équipe' : 'Teamwork',
       description: lang === 'fr' 
-        ? 'Excellente capacité à collaborer et à contribuer à des projets d\'équipe'
-        : 'Excellent ability to collaborate and contribute to team projects',
+        ? 'Excellente capacité à collaborer et à contribuer à des projets d\'équipe.'
+        : 'Excellent ability to collaborate and contribute to team projects.',
     },
     {
-      title: lang === 'fr' ? 'Communication' : 'Communication',
+      title: lang === 'fr' ? 'Curieux' : 'Curious',
       description: lang === 'fr'
-        ? 'Communication claire et efficace, tant à l\'écrit qu\'à l\'oral'
-        : 'Clear and effective communication, both written and verbal',
+        ? 'Passionné par les nouvelles technologies, je mène une veille constante et explore régulièrement de nouveaux outils pour enrichir mes compétences'
+        : 'Passionate about new technologies, I am constantly on the lookout and regularly explore new tools to enhance my skills.',
     },
     {
-      title: lang === 'fr' ? 'Résolution de problèmes' : 'Problem Solving',
+      title: lang === 'fr' ? 'Polyvalent' : 'Versatile',
       description: lang === 'fr'
-        ? 'Approche analytique et méthodique des défis techniques'
-        : 'Analytical and methodical approach to technical challenges',
+        ? 'Mon parcours professionnel m’a permis d\'intervenir sur des projets variés allant du support IT à l\'automatisation, en passant par l\'administration système et le développement.'
+        : 'My career path has enabled me to work on a wide range of projects, from IT support and automation to system administration and development.',
+    },
+    {
+      title: lang === 'fr' ? 'Rigoureux' : 'Rigorous',
+      description: lang === 'fr'
+        ? 'Je m\'attache à produire un travail de qualité, structuré et documenté, notamment dans la mise en place d\'infrastructures réseau ou le pilotage de projets techniques.'
+        : 'I am committed to producing high-quality, structured and documented work, particularly when it comes to setting up network infrastructures or managing technical projects.',
     },
     {
       title: lang === 'fr' ? 'Adaptabilité' : 'Adaptability',
       description: lang === 'fr'
-        ? 'Capacité à s\'adapter rapidement aux nouvelles technologies et situations'
-        : 'Ability to quickly adapt to new technologies and situations',
+        ? 'Capacité à s\'adapter rapidement aux nouvelles technologies et situations.'
+        : 'Ability to quickly adapt to new technologies and situations.',
     },
   ];
 
@@ -47,44 +59,68 @@ function App() {
       icon: Server,
       details: lang === 'fr' ? [
         'Administration Linux/Windows Server',
-        'Virtualisation (VMware, Docker)',
+        'Hyperviseur (Proxmox, ESXi, Hyper V)',
+        'Virtualisation (VMware, VirtualBox)',
         'Scripting (Bash, PowerShell)',
         'Monitoring et supervision',
       ] : [
         'Linux/Windows Server Administration',
+        'Hypervisor (Proxmox, ESXi, Hyper V)',
         'Virtualization (VMware, Docker)',
         'Scripting (Bash, PowerShell)',
-        'Monitoring and supervision',
+        'Monitoring and supervision (Centreon, PRTG)',
       ],
     },
     network: {
       title: lang === 'fr' ? 'Réseaux' : 'Networks',
       icon: Network,
       details: lang === 'fr' ? [
-        'Configuration routeurs/switchs',
+        'Configuration routeurs/switchs (Cisco)',
         'Protocoles réseau TCP/IP',
-        'VLANs et routage',
-        'Solutions SD-WAN',
+        'VLANs et Routage',
       ] : [
         'Router/switch configuration',
         'TCP/IP network protocols',
         'VLANs and routing',
-        'SD-WAN solutions',
       ],
     },
     security: {
       title: lang === 'fr' ? 'Cybersécurité' : 'Cybersecurity',
       icon: Shield,
       details: lang === 'fr' ? [
-        'Tests d\'intrusion',
-        'Analyse de vulnérabilités',
+        'Pentesting (Kali Linux)',
+        'Analyse de vulnérabilités (CVE)',
         'Sécurité réseau',
-        'Réponse aux incidents',
+        'Forensic',
       ] : [
-        'Penetration testing',
+        'Pentesting (Kali Linux)',
         'Vulnerability analysis',
         'Network security',
-        'Incident response',
+        'Forensic',
+      ],
+    },
+    developement: {
+      title: lang === 'fr' ? 'Développement' : 'Development',
+      icon: Keyboard,
+      details: lang === 'fr' ? [
+        'Développement logiciel (C#, Kotline)',
+        'Développement Web (HTML, CSS, JAVASCRIPT)  ',
+        'Développement d\'API (Python)',
+      ] : [
+        'Software development (C#, Kotline)',
+        'Web development (HTML, CSS, JAVASCRIPT)',
+        'API development (Python)',
+      ],
+    },
+    nocode: {
+      title: lang === 'fr' ? 'No-code' : 'No-code',
+      icon: KeyboardOff ,
+      details: lang === 'fr' ? [
+        'Automatisation de tâche/process (Make.com)',
+        'Intégration d\'outil d\'Intelligence Artificiel (ChatGPT, PerplexityIA, Claude IA, etc)',
+      ] : [
+        'Task/process automation (Make.com)',
+        'Integration of Artificial Intelligence tools (ChatGPT, PerplexityIA, Claude IA, etc.)',
       ],
     },
   };
@@ -213,20 +249,20 @@ function App() {
         <div className="container mx-auto px-6 py-16">
           <div className="flex flex-col items-center text-center">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=150&h=150"
+              src="./ressources/photo_profil.jpg"
               alt="Photo de profil"
               className="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6"
             />
-            <h1 className="text-4xl font-bold mb-4">Votre Nom</h1>
+            <h1 className="text-4xl font-bold mb-4">Adrien Eude</h1>
             <p className="text-xl mb-6">{t.title}</p>
             <div className="flex gap-4 mb-8">
-              <a href="#" className="hover:text-blue-200 transition-colors">
+              <a href="https://github.com/eudeadrien" className="hover:text-blue-200 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-blue-200 transition-colors">
+              <a href="https://www.linkedin.com/in/adrien-eude-916103221/" className="hover:text-blue-200 transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:votre@email.com" className="hover:text-blue-200 transition-colors">
+              <a href="mailto:eude.adrien27@gmail.com" className="hover:text-blue-200 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -247,9 +283,11 @@ function App() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-8 text-center">{t.about}</h2>
           <div className="grid md:grid-cols-2 gap-12">
+              {/* About */}
             <div>
               <h3 className="text-xl font-semibold mb-4">{t.presentation}</h3>
               <p className="text-gray-600 mb-6">{t.description}</p>
+              {/* Soft Skills */}
               <div className="flex flex-wrap gap-3">
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Réseaux</span>
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Systèmes</span>
@@ -266,7 +304,32 @@ function App() {
                 ))}
               </div>
             </div>
-            <div>
+
+            {/* Centre D'interet */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold mb-4">{t.center_interet}</h3>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
+                  <img src="/ressources/gaming.png" alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
+                  <span className="text-sm text-gray-700 font-medium text-center">Jeux Vidéo</span>
+                </div>
+
+                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
+                  <img src="/ressources/f1.png" alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
+                  <span className="text-sm text-gray-700 font-medium text-center">Formule 1</span>
+                </div>
+
+                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
+                  <img src="/ressources/manga.png" alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
+                  <span className="text-sm text-gray-700 font-medium text-center">Mangas / Animés</span>
+                </div>
+
+                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
+                  <img src="/ressources/cybersecurity.png" alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
+                  <span className="text-sm text-gray-700 font-medium text-center">Cybersécurité</span>
+                </div>
+              </div>
+             {/* Skills */}
               <h3 className="text-xl font-semibold mb-4">{t.skills}</h3>
               <div className="space-y-4">
                 {Object.entries(skills).map(([key, skill]) => (
