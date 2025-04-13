@@ -6,6 +6,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { translations } from './translations';
+import f1 from '/assets/f1.png';
+import gaming from '/assets/gaming.png';
+import manga from '/assets/manga.png';
+import cybersecurity from '/assets/cybersecurity.png';
+import CV from '/assets/CV_3.0_Adrien_Eude.pdf';
+import photoprofil from '/assets/photo_profil.jpg';
 
 function App() {
   const [lang, setLang] = useState<'fr' | 'en'>('fr');
@@ -249,7 +255,7 @@ function App() {
         <div className="container mx-auto px-6 py-16">
           <div className="flex flex-col items-center text-center">
             <img
-              src="./ressources/photo_profil.jpg"
+              src={photoprofil}
               alt="Photo de profil"
               className="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6"
             />
@@ -267,7 +273,7 @@ function App() {
               </a>
             </div>
             <a
-              href="./CV_3.0_Adrien_Eude.pdf"
+              href={CV}
               download
               className="flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
             >
@@ -310,22 +316,22 @@ function App() {
               <h3 className="text-xl font-semibold mb-4">{t.center_interet}</h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="./ressources/gaming.png" alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
+                  <img src={gaming} alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Jeux Vidéo</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="./ressources/f1.png" alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
+                  <img src={f1} alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
                   <span className="text-sm text-gray-700 font-medium text-center">Formule 1</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
-                  <img src="./ressources/manga.png" alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
+                  <img src={manga} alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Mangas / Animés</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
-                  <img src="./ressources/cybersecurity.png" alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
+                  <img src={cybersecurity} alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">Cybersécurité</span>
                 </div>
               </div>
