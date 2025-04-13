@@ -267,7 +267,7 @@ function App() {
               </a>
             </div>
             <a
-              href="/path-to-your-cv.pdf"
+              href="./CV_3.0_Adrien_Eude.pdf"
               download
               className="flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
             >
