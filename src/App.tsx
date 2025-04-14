@@ -12,6 +12,9 @@ import manga from '/assets/manga.png';
 import cybersecurity from '/assets/cybersecurity.png';
 import CV from '/assets/CV_3.0_Adrien_Eude.pdf';
 import photoprofil from '/assets/photo_profil.jpg';
+import makebasic from '/assets/make_basic.png';
+import makeintermediate from '/assets/make_intermediate.png';
+import toeic from '/assets/toeic.jpg';
 
 function App() {
   const [lang, setLang] = useState<'fr' | 'en'>('fr');
@@ -36,7 +39,7 @@ function App() {
     {
       title: lang === 'fr' ? 'Curieux' : 'Curious',
       description: lang === 'fr'
-        ? 'Passionné par les nouvelles technologies, je mène une veille constante et explore régulièrement de nouveaux outils pour enrichir mes compétences'
+        ? 'Passionné par les nouvelles technologies, je mène une veille constante et explore régulièrement de nouveaux outils pour enrichir mes compétences.'
         : 'Passionate about new technologies, I am constantly on the lookout and regularly explore new tools to enhance my skills.',
     },
     {
@@ -133,62 +136,93 @@ function App() {
 
   const certifications = [
     {
-      id: 'cissp',
-      title: 'CISSP',
-      organization: 'ISC²',
-      date: '2023',
-      image: 'https://images.unsplash.com/photo-1576267423048-15c0040fec78?fit=crop&w=300&h=200',
+      id: 'makebasic',
+      title: lang === 'fr'
+        ? 'Make Basique.'
+        : 'Make Basic.',
+      organization: 'Make Academy',
+      date: '2024',
+      image: makebasic,
       description: lang === 'fr'
-        ? 'Certified Information Systems Security Professional - Certification de référence en sécurité des systèmes d\'information.'
-        : 'Certified Information Systems Security Professional - Leading certification in information systems security.',
+        ? 'Badge Make Basique - Les bases de l\'automatisation maîtrisées.'
+        : 'Badge Make Basic - Mastering the basics of automation.',
       details: lang === 'fr' ? {
         domains: [
-          'Sécurité et gestion des risques',
-          'Sécurité des actifs',
-          'Architecture et ingénierie de sécurité',
-          'Communication et sécurité réseau',
-          'Gestion des identités et des accès',
+          'Donnée, Gestion de données, Structure de données',
+          'Automatisation',
+          'Agrégation',
+          'No-code',
         ],
-        validité: 'Certification valide jusqu\'en 2026',
-        score: '750/1000',
+        validity: 'Certification valide à vie',
+        score: '',
       } : {
         domains: [
-          'Security and Risk Management',
-          'Asset Security',
-          'Security Architecture and Engineering',
-          'Communication and Network Security',
-          'Identity and Access Management',
+          'Data, Data Literacy, Data Structures',
+          'Automation',
+          'Aggregation',
+          'No-code',
         ],
-        validity: 'Certification valid until 2026',
-        score: '750/1000',
+        validity: 'Certification valid for life',
+        score: '',
       },
     },
     {
-      id: 'ccna',
-      title: 'CCNA',
-      organization: 'Cisco',
-      date: '2022',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?fit=crop&w=300&h=200',
+      id: 'makeintermediate',
+      title: lang === 'fr'
+        ? 'Make Intermédiare.'
+        : 'Make Intermediary.',
+      organization: 'Make Academy',
+      date: '2024',
+      image: makeintermediate,
       description: lang === 'fr'
-        ? 'Cisco Certified Network Associate - Certification en administration réseau.'
-        : 'Cisco Certified Network Associate - Network administration certification.',
+        ? 'Badge Make Intermédiare - L\'automatisation au niveau supérieur.'
+        : 'Badge Make Intermediate - Automation to the next level.',
       details: lang === 'fr' ? {
         domains: [
-          'Configuration des équipements réseau',
-          'Protocoles de routage',
-          'Commutation et réseaux locaux',
-          'Services d\'infrastructure',
+          'Données / Structures de données / Tableaux / JSON',
+          'Automatisation / Fonctions / map() / get() / Directives',
+          'HTTP / Requêtes HTTP / Paramètres d’URL / Webhooks',
+          'Gestion des erreurs',
+          'Manipulation des dates',
         ],
-        validité: 'Certification valide jusqu\'en 2025',
+        validity: 'Certification valide à vie',
+        score: '',
+      } : {
+        domains: [
+          'Data / Data Structures / Array / JSON',
+          'Automation / Functions / map() / get() / Directive',
+          'HTTP / HTTP Requests / URL query / Webhooks',
+          'No-Error Handling',
+          'Date Manipulation',
+        ],
+        validity: 'Certification valid for life',
+        score: '',
+      },
+    },
+    {
+      id: 'toeic',
+      title: 'TOEIC',
+      organization: 'ETS Global',
+      date: '2025',
+      image: toeic,
+      description: lang === 'fr'
+        ? 'ETS Global certification d\'anglais - Test d\'anglais pour la communication internationale.'
+        : 'ETS Global english certification - Test of English for International Communication.',
+      details: lang === 'fr' ? {
+        domains: [
+          'Compréhension écrite',
+          'Compréhension orale',
+          'Identifiant de la certification : 5101789782',
+        ],
+        validity: 'Certification valide jusqu\'en 2027',
         score: '925/1000',
       } : {
         domains: [
-          'Network equipment configuration',
-          'Routing protocols',
-          'Switching and local networks',
-          'Infrastructure services',
+          'Reading comprehension',
+          'Listening comprehension',
+          'Certification identifier: 5101789782',
         ],
-        validity: 'Certification valid until 2025',
+        validity: 'Certification valid until 2027',
         score: '925/1000',
       },
     },
@@ -375,13 +409,13 @@ function App() {
             {certifications.map((cert) => (
               <div
                 key={cert.id}
-                className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer transform hover:scale-105 transition-transform"
+                className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer transform hover:scale-105 transition-transform flex flex-col justify-between h-full min-h-[450px]"
                 onClick={() => setSelectedCertification(cert.id)}
               >
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-40 object-cover"
+                  className="block mx-auto mt-4 w-100 h-100 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="font-semibold text-lg mb-2">{cert.title}</h3>
