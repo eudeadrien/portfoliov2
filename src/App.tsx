@@ -415,7 +415,7 @@ function App() {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="block mx-auto mt-4 w-100 h-100 object-cover"
+                  className="block mx-auto mt-4 w-50 h-100 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="font-semibold text-lg mb-2">{cert.title}</h3>
@@ -479,12 +479,14 @@ function App() {
               </h3>
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold">Diplôme d'Ingénieur en Systèmes d'Information</h4>
-                  <p className="text-gray-600">École d'ingénieurs • 2020 - 2023</p>
+                  <h4 className="font-semibold">{t.formation1titre}</h4>
+                  <p className="text-gray-600">{t.formation1ecole} • 2020 - 2023</p>
+                  <p className="mt-2 text-justify">{t.formation1description}</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold">DUT Informatique</h4>
-                  <p className="text-gray-600">IUT • 2018 - 2020</p>
+                  <h4 className="font-semibold">{t.formation2titre}</h4>
+                  <p className="text-gray-600">{t.formation2ecole} • 2018 - 2020</p>
+                  <p className="mt-2 text-justify">{t.formation2description}</p>
                 </div>
               </div>
             </div>

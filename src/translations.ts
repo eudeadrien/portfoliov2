@@ -18,6 +18,12 @@ export const translations = {
     downloadCV: "Télécharger mon CV",
     certificationDetails: "Détails de la certification",
     close: "Fermer",
+    formation1titre : "Diplôme d'Ingénieur en Informatique",
+    formation1ecole : "CESI de Rouen",
+    formation1description : "Formation d’ingénieur en informatique en alternance sur 3 ans au CESI, orientée autour de cas concrets en entreprise. Réalisation de projets techniques variés : réseau, systèmes, cybersécurité, développement web et logiciel.",
+    formation2titre : "Diplôme Universitaire Technologique - Réseaux & Télécommunications",
+    formation2ecole : "IUT de Rouen",
+    formation2description : "Formation en 2 ans avec focus sur l’approche pratique. Compétences acquises à travers divers projets : conception et gestion de réseaux, programmation (langages variés) & développement web (frontend & backend)",
   },
   en: {
     title: "Systems & Network Engineer - Cybersecurity",
@@ -38,5 +44,11 @@ export const translations = {
     downloadCV: "Download CV",
     certificationDetails: "Certification Details",
     close: "Close",
+    formation1titre : "Diploma in Computer Engineering ",
+    formation1ecole : "CESI Rouen",
+    formation1description : "3-year work-linked IT engineering course at CESI, based on practical case studies in companies. A wide range of technical projects: networks, systems, cybersecurity, web and software development.",
+    formation2titre : "University Technology Diploma - Networks & Telecommunications",
+    formation2ecole : "Rouen UIT",
+    formation2description : "",
   }
 };
