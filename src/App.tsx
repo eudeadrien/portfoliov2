@@ -488,6 +488,16 @@ function App() {
                   <p className="text-gray-600">{t.formation2ecole} • 2018 - 2020</p>
                   <p className="mt-2 text-justify">{t.formation2description}</p>
                 </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-semibold">{t.formation3titre}</h4>
+                  <p className="text-gray-600">{t.formation3ecole} • 2018 - 2020</p>
+                  <p className="mt-2 text-justify">{t.formation3description}</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-semibold">{t.formation4titre}</h4>
+                  <p className="text-gray-600">{t.formation4ecole} • 2018 - 2020</p>
+                  <p className="mt-2 text-justify">{t.formation4description}</p>
+                </div>
               </div>
             </div>
             
@@ -499,16 +509,26 @@ function App() {
                 </svg>
                 {t.experience}
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-6 text-justify">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold">Stage - Administrateur Système</h4>
-                  <p className="text-gray-600">Entreprise • 6 mois</p>
-                  <p className="mt-2">Administration système et sécurisation d'infrastructure</p>
+                  <h4 className="font-semibold">{t.experience1titre}</h4>
+                  <p className="text-gray-600">{t.experience1ecole} • 6 {t.month}</p>
+                  <p className="mt-2">{t.experience1description}</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold">Stage - Analyste Cybersécurité</h4>
-                  <p className="text-gray-600">Entreprise • 4 mois</p>
-                  <p className="mt-2">Analyse de vulnérabilités et tests d'intrusion</p>
+                  <h4 className="font-semibold">{t.experience2titre}</h4>
+                  <p className="text-gray-600">{t.experience2ecole} • 3 {t.month}</p>
+                  <p className="mt-2">{t.experience2description}</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-semibold">{t.experience3titre}</h4>
+                  <p className="text-gray-600">{t.experience3ecole} • 36 {t.month}</p>
+                  <p className="mt-2">{t.experience3description}</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-semibold">{t.experience4titre}</h4>
+                  <p className="text-gray-600">{t.experience4ecole} • 4 {t.month}</p>
+                  <p className="mt-2">{t.experience4description}</p>
                 </div>
               </div>
             </div>
