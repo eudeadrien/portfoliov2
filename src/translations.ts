@@ -20,6 +20,11 @@ export const translations = {
     certificationDetails: "Détails de la certification",
     close: "Fermer",
 
+    interet1: "Jeux Vidéo",
+    interet2: "Formule 1",
+    interet3: "Culutre Japonaise",
+    interet4: "Cybersécurité",
+
     formation1titre : "Diplôme d'Ingénieur en Informatique",
     formation1ecole : "CESI de Rouen",
     formation1description : "Formation d’ingénieur en informatique en alternance sur 3 ans au CESI, orientée autour de cas concrets en entreprise. Réalisation de projets techniques variés : réseau, systèmes, cybersécurité, développement web et logiciel.",
@@ -37,7 +42,7 @@ export const translations = {
     formation4description : "",
 
     experience1titre : "Freelance",
-    experience1ecole : "High Rock Limited | Saint-Julian, Malte",
+    experience1ecole : "High Rock Limited | Distanciel",
     experience1description : " J’ai poursuivi ma collaboration avec High Rock Ltd en tant que freelance. Avec les mêmes missions que durant mon stage. Sur mon temps libre.",
 
     experience2titre : " Stagiaire Informatique",
@@ -73,13 +78,18 @@ export const translations = {
     certificationDetails: "Certification Details",
     close: "Close",
 
+    interet1: "Video Games",
+    interet2: "Formule 1",
+    interet3: "Japanese culture",
+    interet4: "Cybersecurity",
+
     formation1titre : "Diploma in Computer Engineering ",
     formation1ecole : "CESI Rouen",
     formation1description : "3-year work-linked IT engineering course at CESI, based on practical case studies in companies. A wide range of technical projects: networks, systems, cybersecurity, web and software development.",
 
     formation2titre : "University Technology Diploma - Networks & Telecommunications",
     formation2ecole : "Rouen UIT",
-    formation2description : "",
+    formation2description : "A 2-year course with a strong practical focus. Skills acquired through various projects: network design and management, programming (various languages) & web development (frontend & backend).",
 
     formation3titre : "",
     formation3ecole : "",

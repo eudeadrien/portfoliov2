@@ -15,6 +15,11 @@ import photoprofil from '/assets/photo_profil.jpg';
 import makebasic from '/assets/make_basic.png';
 import makeintermediate from '/assets/make_intermediate.png';
 import toeic from '/assets/toeic.jpg';
+import bigdata from '/assets/BigData.jpg';
+import easysave from '/assets/easysave.png';
+import wireless from '/assets/network_wireless.jpg';
+import network from '/assets/enterprise_network.jpeg';
+
 
 function App() {
   const [lang, setLang] = useState<'fr' | 'en'>('fr');
@@ -230,44 +235,44 @@ function App() {
 
   const projects = [
     {
-      title: lang === 'fr' ? 'Système de Détection d\'Intrusion' : 'Intrusion Detection System',
+      title: lang === 'fr' ? 'Réseau sans-fil' : 'Wireless Network',
+      description: lang === 'fr'
+        ? 'Projet réalisé dans le cadre de mon IUT, par groupe de huit nous avons été équipés d\'un switch, d\'un routeur, de deux bornes Wi-Fi et d\'un téléphone IP. Le but est de les configurer, et d\'ajouter un IPBX via sous machine virtuelle, afin d\'obtenir une infrastructure d\'entreprise sans fil.'
+        : 'Project carried out as part of my IUT, in groups of eight we were equipped with a switch, a router, two Wi-Fi terminals and an IP phone. The aim is to configure them, and add an IPBX via a virtual machine, in order to obtain a wireless enterprise infrastructure.',
+      image: wireless,
+      tags: ['Wi-Fi', 'Cisco', 'IPBX'],
+    },
+        {
+      title: lang === 'fr' ? 'Réseau d\'entreprise' : 'Enterprise Network',
       description: lang === 'fr' 
-        ? 'Développement d\'un IDS personnalisé utilisant l\'apprentissage automatique'
-        : 'Development of a custom IDS using machine learning',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?fit=crop&w=800&h=400',
-      tags: ['Python', 'Machine Learning'],
+        ? 'Ce projet a été le premier que j\'ai réalisé au CESI, avec trois autres étudiants. Ce projet réseau était basé sur de nombreuses notions, que ce soit l\'administration des serveurs, la configuration d\'un AD (avec toutes ses règles et GPO), l\'installation d\'un routeur redondant (firewall et règles DMZ), mais aussi la supervision (Centreon).'
+        : 'This project was the first I did at CESI, along with three other students. This network project was based on many different notions, whether server administration, configuration of an AD (with all its rules and GPO), installation of redundant router (firewall and DMZ rules) , but also supervision (Centreon). We did very well on this project and got an A grade.',
+      image: network,
+      tags: ['Active Directory', 'Pfsense', 'Centreon', 'Backup'],
     },
     {
-      title: lang === 'fr' ? 'Infrastructure Cloud Sécurisée' : 'Secure Cloud Infrastructure',
+      title: lang === 'fr' ? 'Easysave' : 'Easysave',
       description: lang === 'fr'
-        ? 'Mise en place d\'une infrastructure cloud avec haute disponibilité'
-        : 'Implementation of a highly available cloud infrastructure',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=800&h=400',
-      tags: ['AWS', 'Terraform'],
+        ? 'Réaliser d\'une application de travail sauvegarde en programmation orienté objet, chiffré, journalisé et multithreader.'
+        : 'Create an object-oriented, encrypted, journalized and multithreaded backup work application',
+      image: easysave,
+      tags: ['C#', 'POO', 'XML'],
     },
     {
-      title: lang === 'fr' ? 'Audit de Sécurité' : 'Security Audit',
+      title: lang === 'fr' ? 'Big Data' : 'Big Data',
       description: lang === 'fr'
-        ? 'Réalisation d\'un audit complet de sécurité pour une PME'
-        : 'Comprehensive security audit for an SME',
-      image: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?fit=crop&w=800&h=400',
-      tags: ['Pentest', 'Audit'],
+        ? 'Dans le cadre de ce projet, le groupe CHU (Cloud Healthcare Unit) nous a donc demandé de l\'aider à mettre en place son propre entrepôt de données afin d\'exploiter un grand nombre de données. Après avoir effectué des traitements de données via Talend sur les fichiers sources (PostgreSQL, xls, csv) qui nous ont été fournis, nous avons dû créer des tables partitionnées et des buckets afin d\'optimiser les requêtes. Enfin, une structuration des données dans PowerBI a été demandée.'
+        : 'During this project, the CHU group (Cloud Healthcare Unit) therefore asked us to help it set up its own data warehouse in order to exploit a large amount of data. After performing data processing jobs via Talend on the source files (PostgreSQL, xls, csv) provided to us, we had to create partitioned tables and buckets to optimize requests. And finally a data structuring in PowerBI was requested.',
+      image: bigdata,
+      tags: ['SGBDR', 'Hadoop', 'Hive', 'PowerBI'],
     },
     {
-      title: lang === 'fr' ? 'Automatisation DevSecOps' : 'DevSecOps Automation',
+      title: lang === 'fr' ? 'Élective réseau' : 'Malware Analysis',
       description: lang === 'fr'
-        ? 'Mise en place d\'un pipeline CI/CD sécurisé'
-        : 'Implementation of a secure CI/CD pipeline',
-      image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?fit=crop&w=800&h=400',
-      tags: ['Jenkins', 'GitLab', 'Docker'],
-    },
-    {
-      title: lang === 'fr' ? 'Analyse de Malware' : 'Malware Analysis',
-      description: lang === 'fr'
-        ? 'Création d\'un environnement d\'analyse de logiciels malveillants'
-        : 'Creation of a malware analysis environment',
+        ? 'Dans le cadre de mes études au CESI, en 4ème année, nous devions concevoir une architecture LAN pour une entreprise internationale complète, comprenant plusieurs réseaux LAN, puis concevoir un nuage MPLS et (i)BGP pour les interconnecter.'
+        : 'As part of my studies at CESI, in 4th year, we had to design a LAN architecture for a complete international company, including several LAN networks, and then design an MPLS and (i)BGP cloud to interconnect them.',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fit=crop&w=800&h=400',
-      tags: ['Reverse Engineering', 'Python'],
+      tags: ['Active Directory', 'StormShield', 'Exchange', '3CX', 'MPLS', '(i)BPG', 'OSPF', 'VRF'],
     },
   ];
 
@@ -351,22 +356,22 @@ function App() {
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
                   <img src={gaming} alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
-                  <span className="text-sm text-gray-700 font-medium text-center">Jeux Vidéo</span>
+                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet1}</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
                   <img src={f1} alt="Formule 1" className="w-20 h-20 object-contain mb-2 " />
-                  <span className="text-sm text-gray-700 font-medium text-center">Formule 1</span>
+                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet2}</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
                   <img src={manga} alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
-                  <span className="text-sm text-gray-700 font-medium text-center">Mangas / Animés</span>
+                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet3}</span>
                 </div>
 
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
                   <img src={cybersecurity} alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
-                  <span className="text-sm text-gray-700 font-medium text-center">Cybersécurité</span>
+                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet4}</span>
                 </div>
               </div>
              {/* Skills */}
@@ -512,7 +517,7 @@ function App() {
               <div className="space-y-6 text-justify">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-semibold">{t.experience1titre}</h4>
-                  <p className="text-gray-600">{t.experience1ecole} • 6 {t.month}</p>
+                  <p className="text-gray-600">{t.experience1ecole} • 2 {t.month}</p>
                   <p className="mt-2">{t.experience1description}</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
