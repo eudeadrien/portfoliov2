@@ -19,6 +19,7 @@ import bigdata from '/assets/BigData.jpg';
 import easysave from '/assets/easysave.png';
 import wireless from '/assets/network_wireless.jpg';
 import network from '/assets/enterprise_network.jpeg';
+import cybersecurityproject from '/assets/cybersecurity_project.png';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
   
   const [expandedSkill, setExpandedSkill] = useState<string | null>(null);
   const [selectedCertification, setSelectedCertification] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
+
+  
 
   const softSkills = [
     {
@@ -274,6 +278,14 @@ function App() {
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fit=crop&w=800&h=400',
       tags: ['Active Directory', 'StormShield', 'Exchange', '3CX', 'MPLS', '(i)BPG', 'OSPF', 'VRF'],
     },
+    {
+      title: lang === 'fr' ? 'Cybersécurité' : 'Cybersecurity',
+      description: lang === 'fr'
+        ? 'En cinquième et dernière année, nous avons réalisé un projet en cybersécurité découpé en plusieurs phases : Conception, Pentest, Forensic, et Optimisation. Durant la première phase, l’objectif était de concevoir une architecture réseau et système pour une entreprise fictive de 900 employés, avec certaines contraintes techniques et organisationnelles. Au sein de cette infrastructure, on trouvait un domaine Active Directory (avec un RODC), un serveur de messagerie (Exchange 2019), un serveur de téléphonie (3CX), un serveur de fichiers et de sauvegarde, un outil de supervision (Centreon), un SIEM (Wazuh), ainsi qu’un EDR reposant sur une architecture hybride SOA/Microservices. Une fois cette architecture en place, la seconde phase consistait à attaquer l’infrastructure voisine afin d’identifier et d’exploiter des vulnérabilités. La phase Forensic visait ensuite à retrouver les traces des attaquants à partir des logs et du SIEM. Enfin, la phase d’optimisation était centrée sur l’amélioration de l’infrastructure en matière de sécurité et de fonctionnalité.'
+        : 'In our fifth and final year, we carried out a cybersecurity project divided into several phases: Design, Pentest, Forensic, and Optimization. In the first phase, the objective was to design a network and system architecture for a fictitious company of 900 employees, with certain technical and organizational constraints. This infrastructure included an Active Directory domain (with a RODC), a mail server (Exchange 2019), a telephony server (3CX), a file and backup server, a monitoring tool (Centreon), a SIEM (Wazuh), and an EDR based on a hybrid SOA/Microservices architecture. Once this architecture was in place, the second phase involved attacking the neighboring infrastructure to identify and exploit vulnerabilities. The forensic phase then involved tracking down the attackers\' traces using logs and SIEM. Finally, the optimization phase focused on improving the infrastructure in terms of security and functionality.',
+      image: cybersecurityproject,
+      tags: ['Active Directory', 'StormShield', 'Cisco', 'Exchange', '3CX', 'SIEM', 'Supervision', 'Pentest', 'Forensic'],
+    },
   ];
 
   return (
@@ -493,7 +505,7 @@ function App() {
                   <p className="text-gray-600">{t.formation2ecole} • 2018 - 2020</p>
                   <p className="mt-2 text-justify">{t.formation2description}</p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                {/* <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-semibold">{t.formation3titre}</h4>
                   <p className="text-gray-600">{t.formation3ecole} • 2018 - 2020</p>
                   <p className="mt-2 text-justify">{t.formation3description}</p>
@@ -502,7 +514,7 @@ function App() {
                   <h4 className="font-semibold">{t.formation4titre}</h4>
                   <p className="text-gray-600">{t.formation4ecole} • 2018 - 2020</p>
                   <p className="mt-2 text-justify">{t.formation4description}</p>
-                </div>
+                </div> */}
               </div>
             </div>
             
@@ -540,7 +552,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Projets Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -563,30 +574,64 @@ function App() {
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm h-full">
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+              <div
+                className="bg-white rounded-lg overflow-hidden shadow-sm h-full cursor-pointer hover:shadow-md transition"
+                onClick={() => setSelectedProject(project)}
+              >
+                <img 
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
+                  <p className="text-gray-600 text-justify mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </SwiperSlide>
+              </div>
+            </SwiperSlide>            
             ))}
           </Swiper>
         </div>
+        {selectedProject && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-64 object-cover rounded mb-4"
+                />
+                <p className="text-gray-700 mb-6 whitespace-pre-line text-justify">
+                  {selectedProject.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tags.map((tag, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 rounded text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-6 text-center">
