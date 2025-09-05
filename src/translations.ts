@@ -100,7 +100,7 @@ export const translations = {
     formation4description : "",
 
     experience1titre: "Freelance",
-    experience1ecole: "High Rock Limited | Saint Julian’s, Malta",
+    experience1ecole: "High Rock Limited | Remote working",
     experience1description: "I continued my collaboration with High Rock Ltd as a freelance developer, performing the same tasks as during my internship, in my free time.",
     
     experience2titre: "IT Intern",
