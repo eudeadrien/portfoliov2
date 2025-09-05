@@ -10,7 +10,7 @@ import f1 from '/assets/f1.png';
 import gaming from '/assets/gaming.png';
 import manga from '/assets/manga.png';
 import cybersecurity from '/assets/cybersecurity.png';
-import CV from '/assets/CV_3.0_Adrien_Eude.pdf';
+import CV from '/assets/CV_Adrien_Eude.pdf';
 import photoprofil from '/assets/photo_profil.jpg';
 import makebasic from '/assets/make_basic.png';
 import makeintermediate from '/assets/make_intermediate.png';
