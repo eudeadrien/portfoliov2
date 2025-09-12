@@ -241,48 +241,48 @@ function App() {
     {
       title: lang === 'fr' ? 'Réseau sans-fil' : 'Wireless Network',
       description: lang === 'fr'
-        ? 'Projet réalisé dans le cadre de mon IUT, par groupe de huit nous avons été équipés d\'un switch, d\'un routeur, de deux bornes Wi-Fi et d\'un téléphone IP. Le but est de les configurer, et d\'ajouter un IPBX via sous machine virtuelle, afin d\'obtenir une infrastructure d\'entreprise sans fil.'
-        : 'Project carried out as part of my IUT, in groups of eight we were equipped with a switch, a router, two Wi-Fi terminals and an IP phone. The aim is to configure them, and add an IPBX via a virtual machine, in order to obtain a wireless enterprise infrastructure.',
+        ? 'Projet réalisé dans le cadre de mon IUT. Par groupe de huit, nous avons été équipés d\'un switch, d\'un routeur, de deux bornes Wi-Fi et d\'un téléphone IP. L\'objectif était de configurer ces équipements et d\'ajouter un IPBX via une machine virtuelle secondaire, afin de mettre en place une infrastructure d\'entreprise sans fil.'
+        : 'Project carried out as part of my University Institute of Technology program. In groups of eight, we were provided with a switch, a router, two Wi-Fi access points, and an IP phone. The objective was to configure these devices and add an IPBX through a secondary virtual machine, in order to set up a wireless corporate infrastructure.',
       image: wireless,
       tags: ['Wi-Fi', 'Cisco', 'IPBX'],
     },
         {
       title: lang === 'fr' ? 'Réseau d\'entreprise' : 'Enterprise Network',
       description: lang === 'fr' 
-        ? 'Ce projet a été le premier que j\'ai réalisé au CESI, avec trois autres étudiants. Ce projet réseau était basé sur de nombreuses notions, que ce soit l\'administration des serveurs, la configuration d\'un AD (avec toutes ses règles et GPO), l\'installation d\'un routeur redondant (firewall et règles DMZ), mais aussi la supervision (Centreon).'
-        : 'This project was the first I did at CESI, along with three other students. This network project was based on many different notions, whether server administration, configuration of an AD (with all its rules and GPO), installation of redundant router (firewall and DMZ rules) , but also supervision (Centreon). We did very well on this project and got an A grade.',
+        ? 'Il s\'agit du premier projet que j\'ai mené au CESI, en collaboration avec trois autres étudiants. Ce projet réseau couvrait plusieurs domaines clés : administration des serveurs, configuration d\'un Active Directory (incluant les règles et GPO), mise en place d\'un routeur redondant (firewall et règles de DMZ), et supervision à l\'aide de la solution Centreon.'
+        : 'This was the first project I carried out at CESI, together with three other students. The network project covered several key areas: server administration, Active Directory configuration (including rules and GPOs), deployment of a redundant router (firewall and DMZ rules), as well as supervision using Centreon.',
       image: network,
       tags: ['Active Directory', 'Pfsense', 'Centreon', 'Backup'],
     },
     {
       title: lang === 'fr' ? 'Easysave' : 'Easysave',
       description: lang === 'fr'
-        ? 'Réaliser d\'une application de travail sauvegarde en programmation orienté objet, chiffré, journalisé et multithreader.'
-        : 'Create an object-oriented, encrypted, journalized and multithreaded backup work application',
+        ? 'Réalisation d\'une application de sauvegarde en programmation orientée objet, avec chiffrement, journalisation et gestion multi-thread.'
+        : 'Development of a backup application using object-oriented programming, incorporating data encryption, operation logging, and multi-threading support.',
       image: easysave,
       tags: ['C#', 'POO', 'XML'],
     },
     {
       title: lang === 'fr' ? 'Big Data' : 'Big Data',
       description: lang === 'fr'
-        ? 'Dans le cadre de ce projet, le groupe CHU (Cloud Healthcare Unit) nous a donc demandé de l\'aider à mettre en place son propre entrepôt de données afin d\'exploiter un grand nombre de données. Après avoir effectué des traitements de données via Talend sur les fichiers sources (PostgreSQL, xls, csv) qui nous ont été fournis, nous avons dû créer des tables partitionnées et des buckets afin d\'optimiser les requêtes. Enfin, une structuration des données dans PowerBI a été demandée.'
-        : 'During this project, the CHU group (Cloud Healthcare Unit) therefore asked us to help it set up its own data warehouse in order to exploit a large amount of data. After performing data processing jobs via Talend on the source files (PostgreSQL, xls, csv) provided to us, we had to create partitioned tables and buckets to optimize requests. And finally a data structuring in PowerBI was requested.',
+        ? 'Dans le cadre de ce projet, le groupe CHU (Cloud Healthcare Unit) nous a sollicités pour l\'assister dans la mise en place de son entrepôt de données, destiné à exploiter un large volume de données. Après traitement des fichiers sources (PostgreSQL, xls, csv) à l\'aide de Talend, nous avons créé des tables partitionnées et des buckets afin d\'optimiser les performances des requêtes. Une structuration des données dans PowerBI a également été réalisée.'
+        : 'As part of this project, the CHU group (Cloud Healthcare Unit) asked us to assist in setting up their own data warehouse to leverage a large volume of data. After processing the source files (PostgreSQL, xls, csv) provided to us using Talend, we created partitioned tables and buckets to optimize queries. Finally, data structuring in PowerBI was carried out.',
       image: bigdata,
       tags: ['SGBDR', 'Hadoop', 'Hive', 'PowerBI'],
     },
     {
       title: lang === 'fr' ? 'Élective réseau' : 'Malware Analysis',
       description: lang === 'fr'
-        ? 'Dans le cadre de mes études au CESI, en 4ème année, nous devions concevoir une architecture LAN pour une entreprise internationale complète, comprenant plusieurs réseaux LAN, puis concevoir un nuage MPLS et (i)BGP pour les interconnecter.'
-        : 'As part of my studies at CESI, in 4th year, we had to design a LAN architecture for a complete international company, including several LAN networks, and then design an MPLS and (i)BGP cloud to interconnect them.',
+        ? 'Dans le cadre de ma 4ème année au CESI, nous devions concevoir une architecture LAN pour une entreprise internationale complète, incluant plusieurs réseaux LAN, puis concevoir un nuage MPLS et configurer le (i)BGP pour assurer leur interconnexion.'
+        : 'As part of my 4th year at CESI, we were required to design a LAN architecture for a global company, including multiple LANs, and then design an MPLS cloud and configure (i)BGP to interconnect them.',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fit=crop&w=800&h=400',
       tags: ['Active Directory', 'StormShield', 'Exchange', '3CX', 'MPLS', '(i)BPG', 'OSPF', 'VRF'],
     },
     {
       title: lang === 'fr' ? 'Cybersécurité' : 'Cybersecurity',
       description: lang === 'fr'
-        ? 'En cinquième et dernière année, nous avons réalisé un projet en cybersécurité découpé en plusieurs phases : Conception, Pentest, Forensic, et Optimisation. Durant la première phase, l’objectif était de concevoir une architecture réseau et système pour une entreprise fictive de 900 employés, avec certaines contraintes techniques et organisationnelles. Au sein de cette infrastructure, on trouvait un domaine Active Directory (avec un RODC), un serveur de messagerie (Exchange 2019), un serveur de téléphonie (3CX), un serveur de fichiers et de sauvegarde, un outil de supervision (Centreon), un SIEM (Wazuh), ainsi qu’un EDR reposant sur une architecture hybride SOA/Microservices. Une fois cette architecture en place, la seconde phase consistait à attaquer l’infrastructure voisine afin d’identifier et d’exploiter des vulnérabilités. La phase Forensic visait ensuite à retrouver les traces des attaquants à partir des logs et du SIEM. Enfin, la phase d’optimisation était centrée sur l’amélioration de l’infrastructure en matière de sécurité et de fonctionnalité.'
-        : 'In our fifth and final year, we carried out a cybersecurity project divided into several phases: Design, Pentest, Forensic, and Optimization. In the first phase, the objective was to design a network and system architecture for a fictitious company of 900 employees, with certain technical and organizational constraints. This infrastructure included an Active Directory domain (with a RODC), a mail server (Exchange 2019), a telephony server (3CX), a file and backup server, a monitoring tool (Centreon), a SIEM (Wazuh), and an EDR based on a hybrid SOA/Microservices architecture. Once this architecture was in place, the second phase involved attacking the neighboring infrastructure to identify and exploit vulnerabilities. The forensic phase then involved tracking down the attackers\' traces using logs and SIEM. Finally, the optimization phase focused on improving the infrastructure in terms of security and functionality.',
+        ? 'Pour ma cinquième et dernière année, nous avons mené un projet en cybersécurité structuré en plusieurs phases : Conception, Pentest, Forensic et Optimisation. Lors de la phase de conception, l\'objectif était de développer une architecture réseau et système pour une entreprise fictive de 900 employés, intégrant des contraintes techniques et organisationnelles spécifiques. L\'infrastructure comprenait un domaine Active Directory (avec RODC), un serveur de messagerie (Exchange 2019), un serveur de téléphonie (3CX), un serveur de fichiers et de sauvegarde, un outil de supervision (Centreon), un SIEM (Wazuh) et un EDR reposant sur une architecture hybride SOA/Microservices. La phase de Pentest consistait à attaquer l\'infrastructure pour identifier et exploiter les vulnérabilités. La phase Forensic visait à retracer les actions des attaquants à partir des logs et du SIEM. Enfin, la phase d\'optimisation portait sur l\'amélioration globale de l\'infrastructure en termes de sécurité et de fonctionnalités.'
+        : 'In the fifth and final year, we carried out a cybersecurity project divided into several phases: Design, Pentest, Forensic, and Optimization. During the first phase, the goal was to design a network and system architecture for a fictitious company of 900 employees, with specific technical and organizational constraints. The infrastructure included an Active Directory domain (with RODC), a mail server (Exchange 2019), a telephony server (3CX), a file and backup server, a monitoring tool (Centreon), a SIEM (Wazuh), and an EDR based on a hybrid SOA/Microservices architecture. Once this architecture was in place, the second phase involved attacking the neighboring infrastructure to identify and exploit vulnerabilities. The Forensic phase aimed to trace the attackers’ actions using logs and the SIEM. Finally, the Optimization phase focused on improving the infrastructure in terms of security and functionality.',
       image: cybersecurityproject,
       tags: ['Active Directory', 'StormShield', 'Cisco', 'Exchange', '3CX', 'SIEM', 'Supervision', 'Pentest', 'Forensic'],
     },

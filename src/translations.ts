@@ -22,7 +22,7 @@ export const translations = {
 
     interet1: "Jeux Vidéo",
     interet2: "Formule 1",
-    interet3: "Culutre Japonaise",
+    interet3: "Culture Japonaise",
     interet4: "Cybersécurité",
 
     formation1titre : "Diplôme d'Ingénieur en Informatique",
