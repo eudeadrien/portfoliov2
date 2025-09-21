@@ -43,7 +43,7 @@ export const translations = {
 
     experience1titre : "Freelance",
     experience1ecole : "High Rock Limited | Distanciel",
-    experience1description : "Sur mon temps libre, j’ai poursuivi ma collaboration avec High Rock Ltd en tant que freelance, avec les mêmes missions que durant mon stage. En recherche d'autres clientes.",
+    experience1description : "Sur mon temps libre, j’ai poursuivi ma collaboration avec High Rock Ltd en tant que freelance, avec les mêmes missions que durant mon stage. En recherche d'autres clients.",
 
     experience2titre : " Stagiaire Informatique",
     experience2ecole : "High Rock Limited | Saint-Julian, Malte",
