@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Server, Shield, Keyboard, KeyboardOff , Network, Globe2, Download, X } from 'lucide-react';
+import { Github, Linkedin, Mail, Server, Shield, Keyboard, KeyboardOff , Network, Globe2, Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -20,6 +20,9 @@ import easysave from '/assets/easysave.png';
 import wireless from '/assets/network_wireless.jpg';
 import network from '/assets/enterprise_network.jpeg';
 import cybersecurityproject from '/assets/cybersecurity_project.png';
+import reseaumultisite from '/assets/internet-reseau-planete.jpeg';
+import pingcastle from '/assets/PingCastle.png';
+
 
 
 function App() {
@@ -244,6 +247,7 @@ function App() {
         ? 'Projet réalisé dans le cadre de mon IUT. Par groupe de huit, nous avons été équipés d\'un switch, d\'un routeur, de deux bornes Wi-Fi et d\'un téléphone IP. L\'objectif était de configurer ces équipements et d\'ajouter un IPBX via une machine virtuelle secondaire, afin de mettre en place une infrastructure d\'entreprise sans fil.'
         : 'Project carried out as part of my University Institute of Technology program. In groups of eight, we were provided with a switch, a router, two Wi-Fi access points, and an IP phone. The objective was to configure these devices and add an IPBX through a secondary virtual machine, in order to set up a wireless corporate infrastructure.',
       image: wireless,
+      type: 'Scolaire',
       tags: ['Wi-Fi', 'Cisco', 'IPBX'],
     },
         {
@@ -252,6 +256,7 @@ function App() {
         ? 'Il s\'agit du premier projet que j\'ai mené au CESI, en collaboration avec trois autres étudiants. Ce projet réseau couvrait plusieurs domaines clés : administration des serveurs, configuration d\'un Active Directory (incluant les règles et GPO), mise en place d\'un routeur redondant (firewall et règles de DMZ), et supervision à l\'aide de la solution Centreon.'
         : 'This was the first project I carried out at CESI, together with three other students. The network project covered several key areas: server administration, Active Directory configuration (including rules and GPOs), deployment of a redundant router (firewall and DMZ rules), as well as supervision using Centreon.',
       image: network,
+      type: 'Scolaire',
       tags: ['Active Directory', 'Pfsense', 'Centreon', 'Backup'],
     },
     {
@@ -260,6 +265,7 @@ function App() {
         ? 'Réalisation d\'une application de sauvegarde en programmation orientée objet, avec chiffrement, journalisation et gestion multi-thread.'
         : 'Development of a backup application using object-oriented programming, incorporating data encryption, operation logging, and multi-threading support.',
       image: easysave,
+      type: 'Scolaire',
       tags: ['C#', 'POO', 'XML'],
     },
     {
@@ -268,14 +274,16 @@ function App() {
         ? 'Dans le cadre de ce projet, le groupe CHU (Cloud Healthcare Unit) nous a sollicités pour l\'assister dans la mise en place de son entrepôt de données, destiné à exploiter un large volume de données. Après traitement des fichiers sources (PostgreSQL, xls, csv) à l\'aide de Talend, nous avons créé des tables partitionnées et des buckets afin d\'optimiser les performances des requêtes. Une structuration des données dans PowerBI a également été réalisée.'
         : 'As part of this project, the CHU group (Cloud Healthcare Unit) asked us to assist in setting up their own data warehouse to leverage a large volume of data. After processing the source files (PostgreSQL, xls, csv) provided to us using Talend, we created partitioned tables and buckets to optimize queries. Finally, data structuring in PowerBI was carried out.',
       image: bigdata,
+      type: 'Scolaire',
       tags: ['SGBDR', 'Hadoop', 'Hive', 'PowerBI'],
     },
     {
-      title: lang === 'fr' ? 'Élective réseau' : 'Malware Analysis',
+      title: lang === 'fr' ? 'Réseau multisite' : 'Multisite network',
       description: lang === 'fr'
         ? 'Dans le cadre de ma 4ème année au CESI, nous devions concevoir une architecture LAN pour une entreprise internationale complète, incluant plusieurs réseaux LAN, puis concevoir un nuage MPLS et configurer le (i)BGP pour assurer leur interconnexion.'
         : 'As part of my 4th year at CESI, we were required to design a LAN architecture for a global company, including multiple LANs, and then design an MPLS cloud and configure (i)BGP to interconnect them.',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fit=crop&w=800&h=400',
+      image: reseaumultisite,
+      type: 'Scolaire',
       tags: ['Active Directory', 'StormShield', 'Exchange', '3CX', 'MPLS', '(i)BPG', 'OSPF', 'VRF'],
     },
     {
@@ -284,7 +292,17 @@ function App() {
         ? 'Pour ma cinquième et dernière année, nous avons mené un projet en cybersécurité structuré en plusieurs phases : Conception, Pentest, Forensic et Optimisation. Lors de la phase de conception, l\'objectif était de développer une architecture réseau et système pour une entreprise fictive de 900 employés, intégrant des contraintes techniques et organisationnelles spécifiques. L\'infrastructure comprenait un domaine Active Directory (avec RODC), un serveur de messagerie (Exchange 2019), un serveur de téléphonie (3CX), un serveur de fichiers et de sauvegarde, un outil de supervision (Centreon), un SIEM (Wazuh) et un EDR reposant sur une architecture hybride SOA/Microservices. La phase de Pentest consistait à attaquer l\'infrastructure pour identifier et exploiter les vulnérabilités. La phase Forensic visait à retracer les actions des attaquants à partir des logs et du SIEM. Enfin, la phase d\'optimisation portait sur l\'amélioration globale de l\'infrastructure en termes de sécurité et de fonctionnalités.'
         : 'In the fifth and final year, we carried out a cybersecurity project divided into several phases: Design, Pentest, Forensic, and Optimization. During the first phase, the goal was to design a network and system architecture for a fictitious company of 900 employees, with specific technical and organizational constraints. The infrastructure included an Active Directory domain (with RODC), a mail server (Exchange 2019), a telephony server (3CX), a file and backup server, a monitoring tool (Centreon), a SIEM (Wazuh), and an EDR based on a hybrid SOA/Microservices architecture. Once this architecture was in place, the second phase involved attacking the neighboring infrastructure to identify and exploit vulnerabilities. The Forensic phase aimed to trace the attackers’ actions using logs and the SIEM. Finally, the Optimization phase focused on improving the infrastructure in terms of security and functionality.',
       image: cybersecurityproject,
+      type: 'Scolaire',
       tags: ['Active Directory', 'StormShield', 'Cisco', 'Exchange', '3CX', 'SIEM', 'Supervision', 'Pentest', 'Forensic'],
+    },
+    {
+      title: lang === 'fr' ? 'Ping Castle' : 'Ping Castle',
+      description: lang === 'fr'
+        ? 'Mise en place d’un système automatisé d’audit AD via PingCastle avec PowerShell : exécution planifiée, archivage et comparaison des rapports, génération de graphiques, et envoi d’un reporting professionnel par e-mail. Résultat : suivi continu de la sécurité AD et réduction du temps manuel consacré aux audits.'
+        : 'Implementation of an automated AD audit system via PingCastle with PowerShell: scheduled execution, report archiving and comparison, graph generation, and professional reporting via email. Result: continuous monitoring of AD security and reduction in manual time spent on audits.',
+      image: pingcastle,
+      type: 'Professionnel',
+      tags: ['PowerShell', 'AD', 'Ping Castle', 'Automatisation'],
     },
   ];
 
@@ -346,10 +364,10 @@ function App() {
               <p className="text-gray-600 mb-6">{t.description}</p>
               {/* Soft Skills */}
               <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Réseaux</span>
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Systèmes</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Réseaux</span>
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Cybersécurité</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Cloud</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">IA</span>
               </div>
               <h3 className="text-xl font-semibold mt-8 mb-4">{t.softSkills}</h3>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -366,6 +384,11 @@ function App() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold mb-4">{t.center_interet}</h3>
               <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
+                  <img src={cybersecurity} alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
+                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet4}</span>
+                </div>
+
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
                   <img src={gaming} alt="Jeux Vidéo" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">{t.interet1}</span>
@@ -379,11 +402,6 @@ function App() {
                 <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl w-40  transition">
                   <img src={manga} alt="Mangas / Animés" className="w-20 h-20 object-contain mb-2" />
                   <span className="text-sm text-gray-700 font-medium text-center">{t.interet3}</span>
-                </div>
-
-                <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl  w-40 transition">
-                  <img src={cybersecurity} alt="Cybersécurité" className="w-20 h-20 object-contain mb-2" />
-                  <span className="text-sm text-gray-700 font-medium text-center">{t.interet4}</span>
                 </div>
               </div>
              {/* Skills */}
@@ -554,51 +572,78 @@ function App() {
       </section>
       {/* Projets Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative">
           <h2 className="text-3xl font-bold mb-12 text-center">{t.projects}</h2>
+
+          {/* Swiper */}
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
             pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
+            navigation={{ prevEl: ".swiper-button-prev", nextEl: ".swiper-button-next" }}
             breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
             className="pb-12"
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-              <div
-                className="bg-white rounded-lg overflow-hidden shadow-sm h-full cursor-pointer hover:shadow-md transition"
-                onClick={() => setSelectedProject(project)}
-              >
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
-                  <p className="text-gray-600 text-justify mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">
-                        {tag}
+                <div
+                  className="bg-white rounded-lg overflow-hidden shadow-sm h-full cursor-pointer hover:shadow-md transition"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    {/* Titre + Label */}
+                    <div className="flex justify-between items-center mb-2">
+                      <h3 className="font-semibold text-lg">{project.title}</h3>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${
+                          project.type === "Professionnel"
+                            ? "bg-green-100 text-green-700"
+                            : "bg-purple-100 text-purple-700"
+                        }`}
+                      >
+                        {project.type}
                       </span>
-                    ))}
+                    </div>
+
+                    <p className="text-gray-600 text-justify mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>            
+              </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* Flèches de navigation */}
+          <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full bg-black/60 hover:bg-black/80">
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </div>
+
+          <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full bg-black/60 hover:bg-black/80">
+            <ChevronRight className="w-6 h-6 text-white" />
+          </div>
         </div>
+        {/* Modal projet */}
         {selectedProject && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
@@ -622,7 +667,10 @@ function App() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tags.map((tag, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 rounded text-sm">
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded text-sm"
+                    >
                       {tag}
                     </span>
                   ))}

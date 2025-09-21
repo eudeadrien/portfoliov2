@@ -1,7 +1,7 @@
 export const translations = {
   fr: {
     month :"mois",
-    title: "Ingénieur Systèmes & Réseux - Cybersécurité",
+    title: "Ingénieur Systèmes & Réseaux - Cybersécurité",
     about: "À Propos",
     presentation: "Présentation",
     skills: "Compétences Techniques",
@@ -43,13 +43,13 @@ export const translations = {
 
     experience1titre : "Freelance",
     experience1ecole : "High Rock Limited | Distanciel",
-    experience1description : " J’ai poursuivi ma collaboration avec High Rock Ltd en tant que freelance. Avec les mêmes missions que durant mon stage. Sur mon temps libre.",
+    experience1description : "Sur mon temps libre, j’ai poursuivi ma collaboration avec High Rock Ltd en tant que freelance, avec les mêmes missions que durant mon stage. En recherche d'autres clientes.",
 
     experience2titre : " Stagiaire Informatique",
     experience2ecole : "High Rock Limited | Saint-Julian, Malte",
     experience2description : " Chargé de l’administration technique des sites web via Prestashop, le catalogue produits, l’optimisation SEO et la maintenance quotidienne. Automatisation de processus internes avec Make.com et intégration de solution d’IA pour améliorer la productivité. Gestion de projets technologiques et j’ai apporté un support technique aux équipes internes.",
 
-    experience3titre : "Apprenti Administrateur Système",
+    experience3titre : "Administrateur Système",
     experience3ecole : "Conseil départemental de l’Eure | Évreux, France",
     experience3description : " Réalisation de cartographies fonctionnelles et techniques du système d’information, assurer la maintenance d’une centaine de serveurs (services Windows, flux, interventions) et j’ai apporté un support technique aux chefs de projet, tout en faisant le lien avec les équipes systèmes. Pilote du projet de catalogue de service du département.",
 
@@ -101,13 +101,13 @@ export const translations = {
 
     experience1titre: "Freelance",
     experience1ecole: "High Rock Limited | Remote working",
-    experience1description: "I continued my collaboration with High Rock Ltd as a freelance developer, performing the same tasks as during my internship, in my free time.",
+    experience1description: "In my spare time, I continued to work with High Rock Ltd as a freelancer, performing the same tasks as during my internship. Looking for other clients.",
     
     experience2titre: "IT Intern",
     experience2ecole: "High Rock Limited | Saint Julian’s, Malta",
     experience2description: "Responsible for the technical administration of websites using Prestashop, managing the product catalog, SEO optimization, and daily maintenance. I automated internal processes with Make.com and integrated AI solutions to boost productivity. I also managed technology projects and provided technical support to internal teams.",
     
-    experience3titre: "System Administrator Apprentice",
+    experience3titre: "System Administrator",
     experience3ecole: "Eure Departmental Council | Évreux, France",
     experience3description: "Created functional and technical mappings of the information system, maintained around a hundred servers (Windows services, network flows, interventions), and supported project managers while coordinating with system teams. I also led the department’s service catalog project.",
     
